@@ -29,7 +29,7 @@ class SolutionLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-//        askNotificationPermission()
+        askNotificationPermission()
         binding.btnLogin.setOnClickListener {
             getFcmToken()
         }
