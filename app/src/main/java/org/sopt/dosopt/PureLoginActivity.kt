@@ -9,11 +9,11 @@ class PureLoginActivity : AppCompatActivity() {
 
     // TODO : Declare the launcher at the top of your Activity/Fragment:
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        askNotificationPermission()
         binding.btnLogin.setOnClickListener {
             getFcmToken()
         }
@@ -24,5 +24,9 @@ class PureLoginActivity : AppCompatActivity() {
 
     }
 
+    private fun askNotificationPermission() {
+        // This is only necessary for API level >= 33 (TIRAMISU)
+        // TODO : Ask Notification permission with launcher
 
+    }
 }
